@@ -1,3 +1,5 @@
+# TARS
+# Overview:
 This is a Machine learning model that detects fake news.
 This is often done to further or impose certain ideas and is often achieved with political agendas. Such news items may contain false and/or exaggerated claims, and may end up being viralized by algorithms, and users may end up in a filter bubble.
 I used sklearn to build a TfidfVectorizer on our dataset. Then, i initialized a PassiveAggressive Classifier to fit the model.
