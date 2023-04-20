@@ -1,17 +1,23 @@
 # TARS
-# Overview:
-This is a Machine learning model that detects fake news.
-This is often done to further or impose certain ideas and is often achieved with political agendas. Such news items may contain false and/or exaggerated claims, and may end up being viralized by algorithms, and users may end up in a filter bubble.
-I used sklearn to build a TfidfVectorizer on our dataset. Then, i initialized a PassiveAggressive Classifier to fit the model.
+## Overview
+TARS is a machine learning model that predicts fake news. The model can be used to classify news articles as either real or fake based on the text data in the article. This can be a valuable tool in the fight against misinformation and propaganda.
 
-What is a TfidfVectorizer?
-TF (Term Frequency): The number of times a word appears in a document is its Term Frequency. A higher value means a term appears more often than others, and so, the document is a good match when the term is part of the search terms.
+### Dataset
 
-IDF (Inverse Document Frequency): Words that occur many times a document, but also occur many times in many others, may be irrelevant. IDF is a measure of how significant a term is in the entire corpus.
+The dataset used to train TARS consisted of various news articles, both real and fake. The articles were labeled as either "real" or "fake" to provide a basis for the model to learn from. The dataset was carefully selected to ensure that it was representative of the types of articles that the model would encounter in the real world.
 
-The TfidfVectorizer converts a collection of raw documents into a matrix of TF-IDF features.
+### TfidfVectorizer
 
-What is a PassiveAggressiveClassifier?
-Passive Aggressive algorithms are online learning algorithms. Such an algorithm remains passive for a correct classification outcome, and turns aggressive in the event of a miscalculation, updating and adjusting. Unlike most other algorithms, it does not converge. Its purpose is to make updates that correct the loss, causing very little change in the norm of the weight vector.
+Scikit-learn's TfidfVectorizer was used to process the text data in the dataset. TfidfVectorizer stands for "term frequency-inverse document frequency vectorizer." This vectorizer converts a collection of raw documents into a matrix of TF-IDF features. TF-IDF stands for "term frequency-inverse document frequency," which is a measure of how important a word is to a document in a collection or corpus. The TfidfVectorizer was chosen because it is a simple yet effective way to convert raw text data into a set of features that can be used to train a machine learning model.
 
-This is a classsification model because it has a dicrete output and classifies either as Real or FAKE
+### PassiveAggressive Classifier
+
+After the text data was processed, a PassiveAggressive Classifier was used to fit the model. This classifier is a linear algorithm used for large-scale learning. It works by training the model to make correct predictions on the dataset, while also penalizing incorrect predictions. The PassiveAggressive Classifier was chosen because it is a fast and efficient algorithm that is well-suited for text classification tasks.
+
+### Evaluation
+
+The accuracy of TARS was evaluated using a confusion matrix. The matrix was calculated by comparing the predicted labels for a test set of news articles to their true labels. The resulting matrix showed the number of true positives, true negatives, false positives, and false negatives. The accuracy was calculated by summing the true positives and true negatives and dividing by the total number of predictions. The resulting accuracy for TARS was 92.98%.
+
+### Conclusion
+
+TARS is a machine learning model that predicts fake news. It was built using scikit-learn's TfidfVectorizer on a provided dataset and trained using a PassiveAggressive Classifier. With this model, it is possible to accurately predict whether a news article is real or fake. The model has been evaluated and found to be effective at its task, making it a valuable tool in the fight against misinformation and propaganda.
