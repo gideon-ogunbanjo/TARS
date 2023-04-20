@@ -16,7 +16,7 @@ After the text data was processed, a PassiveAggressive Classifier was used to fi
 
 ### Evaluation
 
-The accuracy of TARS was evaluated using a confusion matrix. The matrix was calculated by comparing the predicted labels for a test set of news articles to their true labels. The resulting matrix showed the number of true positives, true negatives, false positives, and false negatives. The accuracy was calculated by summing the true positives and true negatives and dividing by the total number of predictions. The resulting accuracy for TARS was 92.98%.
+The accuracy of TARS was evaluated using a confusion matrix. The matrix was calculated by comparing the predicted labels for a test set of news articles to their true labels. The resulting matrix showed the number of true positives, true negatives, false positives, and false negatives. The accuracy was calculated by summing the true positives and true negatives and dividing by the total number of predictions. The resulting accuracy for TARS was 93.13%.
 
 ### Conclusion
 
