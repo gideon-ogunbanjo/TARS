@@ -22,3 +22,17 @@ st.set_page_config(
 st.title("TARS - Fake News Detection App")
 st.write("TARS is a machine learning model that predicts fake news. The model can be used to classify news articles as either real or fake based on the text data in the article.")
 text_input = st.text_area("Enter a news article:", "")
+
+if st.button("Predict"):
+    if text_input:
+        # Preprocess the input text
+        tfidf_text = loaded_vectorizer.transform([text_input])
+
+        # Make prediction
+        prediction = loaded_model.predict(tfidf_text)
+        result = "Real" if prediction[0] == 'REAL' else "Fake"
+
+        # Display result
+        st.write(f"The news article is: {result}")
+    else:
+        st.warning("Please enter a news article for prediction.")
