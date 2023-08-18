@@ -6,10 +6,10 @@ from sklearn.linear_model import PassiveAggressiveClassifier
 import pickle
 
 # Loading the tranied model
-with open('model.pkl', 'rb') as model_file:
+with open('Model/model.pkl', 'rb') as model_file:
     loaded_model = pickle.load(model_file)
 
-with open('vectorizer.pkl', 'rb') as vectorizer_file:
+with open('Model/vectorizer.pkl', 'rb') as vectorizer_file:
     loaded_vectorizer = pickle.load(vectorizer_file)
 
 # Streamlit UI
