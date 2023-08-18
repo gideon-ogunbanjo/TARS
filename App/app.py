@@ -25,14 +25,19 @@ text_input = st.text_area("Enter a news article:", "")
 
 if st.button("Predict"):
     if text_input:
-        # Preprocess the input text
+        # Preprocesses the input text
         tfidf_text = loaded_vectorizer.transform([text_input])
 
-        # Make prediction
+        # Makes prediction
         prediction = loaded_model.predict(tfidf_text)
         result = "Real" if prediction[0] == 'REAL' else "Fake"
 
-        # Display result
+        # Displays result
         st.write(f"The news article is: {result}")
     else:
         st.warning("Please enter a news article for prediction.")
+        
+st.write("Disclaimer: This model is trained on limited data and might not have access to the latest news.")
+
+link = 'Created by [Gideon Ogunbanjo](https://gideonogunbanjo.netlify.app)'
+st.markdown(link, unsafe_allow_html=True)
