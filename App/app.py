@@ -3,10 +3,14 @@ import streamlit as st
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import PassiveAggressiveClassifier
+import pickle
 
 # Loading the tranied model
-pac = PassiveAggressiveClassifier(max_iter=50)
-tfidf_vectorizer = TfidfVectorizer(stop_words='english', max_df=0.7)
+with open('model.pkl', 'rb') as model_file:
+    loaded_model = pickle.load(model_file)
+
+with open('vectorizer.pkl', 'rb') as vectorizer_file:
+    loaded_vectorizer = pickle.load(vectorizer_file)
 
 # Streamlit UI
 st.set_page_config(
