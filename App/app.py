@@ -15,6 +15,6 @@ st.set_page_config(
     layout="centered"
 )
 
-st.title("TARS - Fake News Detector")
-st.header("TARS is a machine learning model that predicts fake news. The model can be used to classify news articles as either real or fake based on the text data in the article.")
+st.title("TARS - Fake News Detection App")
+st.write("TARS is a machine learning model that predicts fake news. The model can be used to classify news articles as either real or fake based on the text data in the article.")
 text_input = st.text_area("Enter a news article:", "")
